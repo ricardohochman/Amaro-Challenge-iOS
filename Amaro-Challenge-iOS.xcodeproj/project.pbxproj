@@ -41,6 +41,7 @@
 		FAF054372273AD81008F7AE9 /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF054362273AD81008F7AE9 /* CurrencyProtocol.swift */; };
 		FAF0543A2273B1F2008F7AE9 /* ProductCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF054382273B1F2008F7AE9 /* ProductCartTableViewCell.swift */; };
 		FAF0543B2273B1F2008F7AE9 /* ProductCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF054392273B1F2008F7AE9 /* ProductCartTableViewCell.xib */; };
+		FAF0543D2273BF93008F7AE9 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0543C2273BF93008F7AE9 /* ProductViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		FAF054362273AD81008F7AE9 /* CurrencyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
 		FAF054382273B1F2008F7AE9 /* ProductCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTableViewCell.swift; sourceTree = "<group>"; };
 		FAF054392273B1F2008F7AE9 /* ProductCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTableViewCell.xib; sourceTree = "<group>"; };
+		FAF0543C2273BF93008F7AE9 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FA540E2222737B1B00987EC1 /* ProductListViewModel.swift */,
+				FAF0543C2273BF93008F7AE9 /* ProductViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				FA540E062273740700987EC1 /* UIApplication+Extensions.swift in Sources */,
 				FA540E032273740700987EC1 /* UIImageView+Extensions.swift in Sources */,
 				FAF0543A2273B1F2008F7AE9 /* ProductCartTableViewCell.swift in Sources */,
+				FAF0543D2273BF93008F7AE9 /* ProductViewModel.swift in Sources */,
 				FA540E0C2273741200987EC1 /* RequestManager.swift in Sources */,
 				FA540DDD227372A100987EC1 /* AppDelegate.swift in Sources */,
 				FAF0542F2273A70F008F7AE9 /* CartManager.swift in Sources */,
