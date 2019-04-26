@@ -54,9 +54,17 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvV-jS-fA1">
+                        <rect key="frame" x="88.5" y="69.5" width="37" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="TvV-jS-fA1" firstAttribute="bottom" secondItem="49h-ln-oMZ" secondAttribute="bottom" id="0gH-6D-C7O"/>
                     <constraint firstItem="nsB-8e-1TP" firstAttribute="leading" secondItem="49h-ln-oMZ" secondAttribute="trailing" constant="16" id="23O-hJ-zKu"/>
+                    <constraint firstItem="TvV-jS-fA1" firstAttribute="leading" secondItem="nsB-8e-1TP" secondAttribute="leading" id="63t-9Z-lwF"/>
                     <constraint firstItem="I82-id-RJa" firstAttribute="top" secondItem="nsB-8e-1TP" secondAttribute="bottom" constant="4" id="IVi-1D-mv0"/>
                     <constraint firstItem="49h-ln-oMZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="QCX-3P-1pX"/>
                     <constraint firstAttribute="trailing" secondItem="nsB-8e-1TP" secondAttribute="trailing" constant="16" id="Qt9-yE-3oi"/>
@@ -75,6 +83,7 @@
                 <outlet property="colorLabel" destination="niG-Kz-o9g" id="u5W-RY-8Hg"/>
                 <outlet property="mainImageView" destination="49h-ln-oMZ" id="MiH-0V-LYm"/>
                 <outlet property="nameLabel" destination="nsB-8e-1TP" id="TCQ-Mc-bKu"/>
+                <outlet property="quantityLabel" destination="TvV-jS-fA1" id="JeX-UO-SrV"/>
                 <outlet property="sizeLabel" destination="kbm-yk-Je8" id="zJy-KD-4bF"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="115.17857142857142"/>

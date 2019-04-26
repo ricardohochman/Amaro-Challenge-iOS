@@ -14,7 +14,10 @@ class CartManager {
     private var products = [ProductViewModel]()
     
     func addToCart(_ product: ProductViewModel) {
-        products.append(product)
+        product.numberOfProducts += 1
+        if !products.contains(where: { $0.product == product.product && $0.selectedSizeIndexPath == product.selectedSizeIndexPath }) {
+            products.append(product)
+        }
     }
     
     func removeFromCart(_ product: ProductViewModel) {

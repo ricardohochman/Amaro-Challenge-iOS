@@ -16,6 +16,7 @@ class ProductCartTableViewCell: UITableViewCell, ReusableView {
     @IBOutlet private weak var colorLabel: UILabel!
     @IBOutlet private weak var sizeLabel: UILabel!
     @IBOutlet private weak var actualPriceLabel: UILabel!
+    @IBOutlet private weak var quantityLabel: UILabel!
     
     // MARK: - Life Cycle
     override func prepareForReuse() {
@@ -29,5 +30,6 @@ class ProductCartTableViewCell: UITableViewCell, ReusableView {
         actualPriceLabel.text = viewModel.actualPrice
         colorLabel.text = viewModel.color
         sizeLabel.text = viewModel.sizeSelected
+        quantityLabel.text = String(viewModel.numberOfProducts)
     }
 }

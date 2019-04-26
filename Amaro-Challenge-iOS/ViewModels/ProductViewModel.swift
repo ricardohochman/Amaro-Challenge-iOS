@@ -77,7 +77,6 @@ class ProductViewModel {
     }
     
     func addToCart() {
-        numberOfProducts += 1
         CartManager.shared.addToCart(self)
     }
     
