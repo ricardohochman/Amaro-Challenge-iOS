@@ -13,6 +13,19 @@
 		FA540DE4227372A200987EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA540DE3227372A200987EC1 /* Assets.xcassets */; };
 		FA540DE7227372A200987EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA540DE5227372A200987EC1 /* LaunchScreen.storyboard */; };
 		FA540DF2227372A200987EC1 /* Amaro_Challenge_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540DF1227372A200987EC1 /* Amaro_Challenge_iOSTests.swift */; };
+		FA540E032273740700987EC1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540DFD2273740700987EC1 /* UIImageView+Extensions.swift */; };
+		FA540E042273740700987EC1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540DFE2273740700987EC1 /* UIViewController+Extensions.swift */; };
+		FA540E052273740700987EC1 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540DFF2273740700987EC1 /* URLSession+Extensions.swift */; };
+		FA540E062273740700987EC1 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E002273740700987EC1 /* UIApplication+Extensions.swift */; };
+		FA540E072273740700987EC1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E012273740700987EC1 /* UITableView+Extensions.swift */; };
+		FA540E0C2273741200987EC1 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E0A2273741200987EC1 /* RequestManager.swift */; };
+		FA540E0D2273741200987EC1 /* AmaroServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E0B2273741200987EC1 /* AmaroServiceAPI.swift */; };
+		FA540E102273754900987EC1 /* ProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E0F2273754900987EC1 /* ProductsResponse.swift */; };
+		FA540E122273755D00987EC1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E112273755D00987EC1 /* Product.swift */; };
+		FA540E142273756600987EC1 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E132273756600987EC1 /* Size.swift */; };
+		FA540E192273764900987EC1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E162273764400987EC1 /* BaseViewController.swift */; };
+		FA540E1A2273764900987EC1 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E172273764400987EC1 /* CustomActivityIndicator.swift */; };
+		FA540E1B2273764900987EC1 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E182273764400987EC1 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,19 @@
 		FA540DED227372A200987EC1 /* Amaro-Challenge-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Amaro-Challenge-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA540DF1227372A200987EC1 /* Amaro_Challenge_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amaro_Challenge_iOSTests.swift; sourceTree = "<group>"; };
 		FA540DF3227372A200987EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA540DFD2273740700987EC1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		FA540DFE2273740700987EC1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FA540DFF2273740700987EC1 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		FA540E002273740700987EC1 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		FA540E012273740700987EC1 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		FA540E0A2273741200987EC1 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		FA540E0B2273741200987EC1 /* AmaroServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmaroServiceAPI.swift; sourceTree = "<group>"; };
+		FA540E0F2273754900987EC1 /* ProductsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponse.swift; sourceTree = "<group>"; };
+		FA540E112273755D00987EC1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FA540E132273756600987EC1 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		FA540E162273764400987EC1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA540E172273764400987EC1 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
+		FA540E182273764400987EC1 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +105,10 @@
 			children = (
 				FA540DDC227372A100987EC1 /* AppDelegate.swift */,
 				FA540DDE227372A100987EC1 /* ViewController.swift */,
+				FA540E092273741200987EC1 /* Networking */,
+				FA540DFC2273740700987EC1 /* Extensions */,
+				FA540E152273764400987EC1 /* Utils */,
+				FA540E0E2273753A00987EC1 /* Models */,
 				FA540DE0227372A100987EC1 /* Main.storyboard */,
 				FA540DE3227372A200987EC1 /* Assets.xcassets */,
 				FA540DE5227372A200987EC1 /* LaunchScreen.storyboard */,
@@ -94,6 +124,47 @@
 				FA540DF3227372A200987EC1 /* Info.plist */,
 			);
 			path = "Amaro-Challenge-iOSTests";
+			sourceTree = "<group>";
+		};
+		FA540DFC2273740700987EC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA540DFD2273740700987EC1 /* UIImageView+Extensions.swift */,
+				FA540DFE2273740700987EC1 /* UIViewController+Extensions.swift */,
+				FA540DFF2273740700987EC1 /* URLSession+Extensions.swift */,
+				FA540E002273740700987EC1 /* UIApplication+Extensions.swift */,
+				FA540E012273740700987EC1 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA540E092273741200987EC1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FA540E0A2273741200987EC1 /* RequestManager.swift */,
+				FA540E0B2273741200987EC1 /* AmaroServiceAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FA540E0E2273753A00987EC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA540E0F2273754900987EC1 /* ProductsResponse.swift */,
+				FA540E112273755D00987EC1 /* Product.swift */,
+				FA540E132273756600987EC1 /* Size.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA540E152273764400987EC1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA540E162273764400987EC1 /* BaseViewController.swift */,
+				FA540E172273764400987EC1 /* CustomActivityIndicator.swift */,
+				FA540E182273764400987EC1 /* ReusableView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +268,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA540E192273764900987EC1 /* BaseViewController.swift in Sources */,
+				FA540E102273754900987EC1 /* ProductsResponse.swift in Sources */,
+				FA540E052273740700987EC1 /* URLSession+Extensions.swift in Sources */,
+				FA540E0D2273741200987EC1 /* AmaroServiceAPI.swift in Sources */,
+				FA540E072273740700987EC1 /* UITableView+Extensions.swift in Sources */,
+				FA540E142273756600987EC1 /* Size.swift in Sources */,
+				FA540E1B2273764900987EC1 /* ReusableView.swift in Sources */,
+				FA540E042273740700987EC1 /* UIViewController+Extensions.swift in Sources */,
+				FA540E122273755D00987EC1 /* Product.swift in Sources */,
+				FA540E062273740700987EC1 /* UIApplication+Extensions.swift in Sources */,
+				FA540E032273740700987EC1 /* UIImageView+Extensions.swift in Sources */,
+				FA540E0C2273741200987EC1 /* RequestManager.swift in Sources */,
 				FA540DDF227372A100987EC1 /* ViewController.swift in Sources */,
 				FA540DDD227372A100987EC1 /* AppDelegate.swift in Sources */,
+				FA540E1A2273764900987EC1 /* CustomActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
