@@ -76,4 +76,18 @@ extension CartListViewController: UITableViewDataSource {
         cell.setup(viewModel: cartManager.product(at: indexPath.row))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            cartManager.removeFromCart(cartManager.product(at: indexPath.row))
+            tableView.deleteRows(at: [indexPath], with: .none)
+            tableView.endUpdates()
+            setupLayout()
+        }
+    }
 }

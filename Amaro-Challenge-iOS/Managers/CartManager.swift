@@ -14,11 +14,12 @@ class CartManager {
     private var products = [ProductViewModel]()
     
     func addToCart(_ product: ProductViewModel) {
-        self.products.append(product)
+        products.append(product)
     }
     
     func removeFromCart(_ product: ProductViewModel) {
-        self.products.remove(object: product)
+        product.clearProduct()
+        products.remove(object: product)
     }
     
     // MARK: - Data Source
@@ -39,5 +40,4 @@ class CartManager {
         let price = products.reduce(0, { $0 + (Double($1.numberOfProducts) * ($1.priceDouble)) })
         return price.toBrazilianCurrency() ?? ""
     }
-
 }
