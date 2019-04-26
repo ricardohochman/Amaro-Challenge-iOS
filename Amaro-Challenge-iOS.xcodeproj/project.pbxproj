@@ -30,6 +30,8 @@
 		FA540E2722737D2A00987EC1 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E2522737D2A00987EC1 /* ProductCollectionViewCell.swift */; };
 		FA540E2822737D2A00987EC1 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA540E2622737D2A00987EC1 /* ProductCollectionViewCell.xib */; };
 		FAF05424227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */; };
+		FAF05427227394E7008F7AE9 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF05425227394E7008F7AE9 /* ProductDetailViewController.swift */; };
+		FAF05428227394E7008F7AE9 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF05426227394E7008F7AE9 /* ProductDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		FA540E2522737D2A00987EC1 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA540E2622737D2A00987EC1 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		FAF05425227394E7008F7AE9 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		FAF05426227394E7008F7AE9 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 			children = (
 				FA540E1D22737AB200987EC1 /* ProductListViewController.swift */,
 				FA540E1E22737AB200987EC1 /* ProductListViewController.xib */,
+				FAF05425227394E7008F7AE9 /* ProductDetailViewController.swift */,
+				FAF05426227394E7008F7AE9 /* ProductDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				FA540DE7227372A200987EC1 /* LaunchScreen.storyboard in Resources */,
 				FA540E2022737AB200987EC1 /* ProductListViewController.xib in Resources */,
 				FA540E2822737D2A00987EC1 /* ProductCollectionViewCell.xib in Resources */,
+				FAF05428227394E7008F7AE9 /* ProductDetailViewController.xib in Resources */,
 				FA540DE4227372A200987EC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +328,7 @@
 				FA540E0C2273741200987EC1 /* RequestManager.swift in Sources */,
 				FA540DDD227372A100987EC1 /* AppDelegate.swift in Sources */,
 				FA540E2322737B1B00987EC1 /* ProductListViewModel.swift in Sources */,
+				FAF05427227394E7008F7AE9 /* ProductDetailViewController.swift in Sources */,
 				FA540E2722737D2A00987EC1 /* ProductCollectionViewCell.swift in Sources */,
 				FA540E1A2273764900987EC1 /* CustomActivityIndicator.swift in Sources */,
 			);

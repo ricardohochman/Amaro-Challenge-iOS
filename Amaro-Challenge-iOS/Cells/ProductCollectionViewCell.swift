@@ -10,6 +10,7 @@ import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell, ReusableView {
     
+    // MARK: - Outlets
     @IBOutlet private weak var discountLabel: UILabel!
     @IBOutlet private weak var image: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -17,10 +18,12 @@ class ProductCollectionViewCell: UICollectionViewCell, ReusableView {
     @IBOutlet private weak var actualPriceLabel: UILabel!
     @IBOutlet private weak var installmentsLabel: UILabel!
     
+    // MARK: - Life Cycle
     override func prepareForReuse() {
         image.image = nil
     }
     
+    // MARK: - Setups
     func setup(viewModel: ProductViewModel) {
         image.setImage(url: viewModel.imagePath)
         discountLabel.text = viewModel.discount

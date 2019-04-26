@@ -106,6 +106,13 @@ extension ProductListViewController: UICollectionViewDataSource {
         cell.setup(viewModel: viewModel.product(at: indexPath.row))
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = ProductDetailViewController(viewModel: viewModel.product(at: indexPath.row))
+        controller.modalPresentationStyle = .overFullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true)
+    }
 }
 
 extension ProductListViewController: UICollectionViewDelegateFlowLayout {
