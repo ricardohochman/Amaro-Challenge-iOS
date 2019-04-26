@@ -43,6 +43,10 @@ class ProductViewModel {
     // MARK: - Constants
     let product: Product
     
+    // MARK: - Variables
+    var selectedSizeIndexPath: IndexPath?
+    var numberOfProducts = 0
+
     // MARK: - Init
     init(_ product: Product) {
         self.product = product
@@ -92,12 +96,36 @@ class ProductViewModel {
     }
     
     var sizes: [Size] {
-        return product.sizes
+        return product.sizes.filter { $0.available }
     }
     
-    var selectedSizeIndexPath: IndexPath?
+    var sizeSelected: String {
+        return "Tamanho: \(sizes[selectedSizeIndexPath?.row ?? 0].size)"
+    }
+    
+    var color: String {
+        return "Cor: \(product.color)"
+    }
     
     func addToCart() {
-        // TODO: Adicionar produto ao carrinho
+        numberOfProducts += 1
+        CartManager.shared.addToCart(self)
+    }
+    
+    var priceDouble: Double {
+        var price = product.actualPrice.filter("01234567890.,".contains)
+        price = price.replacingOccurrences(of: ",", with: ".")
+        return Double(price) ?? 0.0
+    }
+    
+    func clearProduct() {
+        numberOfProducts = 0
+        selectedSizeIndexPath = nil
+    }
+}
+
+extension ProductViewModel: Equatable {
+    static func == (lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+        return lhs.product == rhs.product
     }
 }

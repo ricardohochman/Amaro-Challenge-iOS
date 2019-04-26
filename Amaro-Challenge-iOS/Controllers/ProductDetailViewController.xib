@@ -79,13 +79,13 @@
                                 <action selector="buyProduct:" destination="-1" eventType="touchUpInside" id="Eg9-ee-DLw"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-gI-tR5">
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-gI-tR5">
                             <rect key="frame" x="294" y="0.0" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="7mt-Ub-RUU"/>
                                 <constraint firstAttribute="height" constant="40" id="jPh-tK-Opa"/>
                             </constraints>
-                            <state key="normal" title="X">
+                            <state key="normal" image="icon-close">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -170,4 +170,7 @@
             <point key="canvasLocation" x="47.826086956521742" y="41.517857142857139"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-close" width="17.5" height="17.5"/>
+    </resources>
 </document>

@@ -59,9 +59,9 @@ extension UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    func showAlert(title: String = "", message: String) {
+    func showAlert(title: String = "", message: String, handler: ((UIAlertAction) -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }

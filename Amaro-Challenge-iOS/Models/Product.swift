@@ -22,3 +22,9 @@ struct Product: Codable {
     let image: String
     let sizes: [Size]
 }
+
+extension Product: Equatable {
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.name == rhs.name
+    }
+}

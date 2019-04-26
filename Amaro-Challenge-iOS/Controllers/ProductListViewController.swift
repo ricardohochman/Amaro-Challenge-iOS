@@ -41,6 +41,7 @@ class ProductListViewController: BaseViewController {
     private func setupNavigationBar() {
         navigationItem.title = "Amaro"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon-shopping")) { _ in
+            CartListViewController().open(flow: .modal(createNavigation: true))
         }
     }
     
