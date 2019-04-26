@@ -21,6 +21,7 @@ class ProductDetailViewController: BaseViewController {
     @IBOutlet private weak var regularPriceLabel: UILabel!
     @IBOutlet private weak var actualPriceLabel: UILabel!
     @IBOutlet private weak var installmentsLabel: UILabel!
+    @IBOutlet private weak var sizeCollectionView: UICollectionView!
     
     // MARK: - Init
     
@@ -33,6 +34,7 @@ class ProductDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        setupCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,13 +66,69 @@ class ProductDetailViewController: BaseViewController {
         installmentsLabel.text = viewModel.installments
     }
     
+    private func setupCollectionView() {
+        sizeCollectionView.register(SizeCollectionViewCell.self)
+    }
+    
     // MARK: - Actions
     
-    @IBAction func closeView(_ sender: Any) {
+    @IBAction func closeView() {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func buyProduct(_ sender: Any) {
-        // TODO: Verificar se selecionou um tamanho
+        if viewModel.selectedSizeIndexPath == nil {
+            self.showAlert(title: "Selecione um tamanho", message: "É necessário selecionar um tamanho para adicionar o produto ao carrinho.")
+            return
+        }
+        
+        viewModel.addToCart()
+        closeView()
+    }
+}
+
+extension ProductDetailViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.sizes.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: SizeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.setup(size: viewModel.sizes[indexPath.row])
+        if let selectedSizeIndexPath = viewModel.selectedSizeIndexPath {
+            let isSelected = selectedSizeIndexPath == indexPath
+            cell.setSelected(value: isSelected)
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? SizeCollectionViewCell else { return }
+        if let currentIndex = viewModel.selectedSizeIndexPath, let cellSelected = collectionView.cellForItem(at: currentIndex) as? SizeCollectionViewCell {
+            cellSelected.setSelected(value: false)
+        }
+        
+        viewModel.selectedSizeIndexPath = indexPath
+        cell.setSelected(value: true)
+    }
+}
+
+extension ProductDetailViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 40, height: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let cellWidth = 40
+        let cellCount = collectionView.numberOfItems(inSection: 0)
+        let cellSpacing = 10
+        let collectionViewWidth = collectionView.frame.width
+        
+        let totalCellWidth = cellWidth * cellCount
+        let totalSpacingWidth = cellSpacing * (cellCount - 1)
+        
+        let leftInset = (collectionViewWidth - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
+        
+        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: leftInset)
     }
 }

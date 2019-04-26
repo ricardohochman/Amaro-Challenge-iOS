@@ -32,6 +32,8 @@
 		FAF05424227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */; };
 		FAF05427227394E7008F7AE9 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF05425227394E7008F7AE9 /* ProductDetailViewController.swift */; };
 		FAF05428227394E7008F7AE9 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF05426227394E7008F7AE9 /* ProductDetailViewController.xib */; };
+		FAF0542B22739E94008F7AE9 /* SizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0542922739E94008F7AE9 /* SizeCollectionViewCell.swift */; };
+		FAF0542C22739E94008F7AE9 /* SizeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF0542A22739E94008F7AE9 /* SizeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		FAF05425227394E7008F7AE9 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		FAF05426227394E7008F7AE9 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
+		FAF0542922739E94008F7AE9 /* SizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAF0542A22739E94008F7AE9 /* SizeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			children = (
 				FA540E2522737D2A00987EC1 /* ProductCollectionViewCell.swift */,
 				FA540E2622737D2A00987EC1 /* ProductCollectionViewCell.xib */,
+				FAF0542922739E94008F7AE9 /* SizeCollectionViewCell.swift */,
+				FAF0542A22739E94008F7AE9 /* SizeCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				FA540E2822737D2A00987EC1 /* ProductCollectionViewCell.xib in Resources */,
 				FAF05428227394E7008F7AE9 /* ProductDetailViewController.xib in Resources */,
 				FA540DE4227372A200987EC1 /* Assets.xcassets in Resources */,
+				FAF0542C22739E94008F7AE9 /* SizeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF05424227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift in Sources */,
+				FAF0542B22739E94008F7AE9 /* SizeCollectionViewCell.swift in Sources */,
 				FA540E192273764900987EC1 /* BaseViewController.swift in Sources */,
 				FA540E102273754900987EC1 /* ProductsResponse.swift in Sources */,
 				FA540E052273740700987EC1 /* URLSession+Extensions.swift in Sources */,

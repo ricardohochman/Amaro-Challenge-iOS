@@ -90,4 +90,14 @@ class ProductViewModel {
     var installments: String {
         return product.installments
     }
+    
+    var sizes: [Size] {
+        return product.sizes
+    }
+    
+    var selectedSizeIndexPath: IndexPath?
+    
+    func addToCart() {
+        // TODO: Adicionar produto ao carrinho
+    }
 }
