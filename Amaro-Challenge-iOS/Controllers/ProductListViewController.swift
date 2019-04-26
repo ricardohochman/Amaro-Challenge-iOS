@@ -43,6 +43,16 @@ class ProductListViewController: BaseViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon-shopping")) { _ in
             CartListViewController().open(flow: .modal(createNavigation: true))
         }
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: viewModel.filterNavigationImage) { _ in
+            self.viewModel.changeFilter()
+            self.updateFilterImage()
+            self.collectionView.reloadData()
+        }
+    }
+    
+    private func updateFilterImage() {
+        self.navigationItem.leftBarButtonItem?.image = viewModel.filterNavigationImage
     }
     
     private func setupCollectionView() {
