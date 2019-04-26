@@ -6,7 +6,7 @@
 //  Copyright © 2019 Ricardo Hochman. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ProductListViewModel {
     
@@ -46,5 +46,48 @@ class ProductViewModel {
     // MARK: - Init
     init(_ product: Product) {
         self.product = product
+    }
+    
+    var name: String {
+        return product.name
+    }
+    
+    var imagePath: String {
+        return product.image
+    }
+    
+    var regularPrice: NSMutableAttributedString {
+        let attributeString = NSMutableAttributedString(string: product.regularPrice)
+        if inSale {
+            attributeString.addAttributes(
+                [.font: UIFont.systemFont(ofSize: 15),
+                 .strikethroughStyle: NSUnderlineStyle.single.rawValue],
+                range: NSRange(location: 0, length: attributeString.length))
+        } else {
+            attributeString.addAttributes(
+                [.font: UIFont.systemFont(ofSize: 17, weight: .semibold)],
+                range: NSRange(location: 0, length: attributeString.length))
+        }
+        return attributeString
+    }
+    
+    var actualPrice: String {
+        return product.actualPrice
+    }
+    
+    var showActualPrice: Bool {
+        return inSale
+    }
+    
+    var inSale: Bool {
+        return product.regularPrice != product.actualPrice
+    }
+    
+    var discount: String {
+        return product.discountPercentage
+    }
+    
+    var installments: String {
+        return product.installments
     }
 }

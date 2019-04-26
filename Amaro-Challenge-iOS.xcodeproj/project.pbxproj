@@ -29,6 +29,7 @@
 		FA540E2322737B1B00987EC1 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E2222737B1B00987EC1 /* ProductListViewModel.swift */; };
 		FA540E2722737D2A00987EC1 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA540E2522737D2A00987EC1 /* ProductCollectionViewCell.swift */; };
 		FA540E2822737D2A00987EC1 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA540E2622737D2A00987EC1 /* ProductCollectionViewCell.xib */; };
+		FAF05424227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		FA540E2222737B1B00987EC1 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		FA540E2522737D2A00987EC1 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA540E2622737D2A00987EC1 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				FA540DFF2273740700987EC1 /* URLSession+Extensions.swift */,
 				FA540E002273740700987EC1 /* UIApplication+Extensions.swift */,
 				FA540E012273740700987EC1 /* UITableView+Extensions.swift */,
+				FAF05423227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF05424227392D2008F7AE9 /* UIBarButtonItem+Extensions.swift in Sources */,
 				FA540E192273764900987EC1 /* BaseViewController.swift in Sources */,
 				FA540E102273754900987EC1 /* ProductsResponse.swift in Sources */,
 				FA540E052273740700987EC1 /* URLSession+Extensions.swift in Sources */,

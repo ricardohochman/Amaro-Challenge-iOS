@@ -9,4 +9,26 @@
 import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell, ReusableView {
+    
+    @IBOutlet private weak var discountLabel: UILabel!
+    @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var regularPriceLabel: UILabel!
+    @IBOutlet private weak var actualPriceLabel: UILabel!
+    @IBOutlet private weak var installmentsLabel: UILabel!
+    
+    override func prepareForReuse() {
+        image.image = nil
+    }
+    
+    func setup(viewModel: ProductViewModel) {
+        image.setImage(url: viewModel.imagePath)
+        discountLabel.text = viewModel.discount
+        discountLabel.isHidden = !viewModel.inSale
+        nameLabel.text = viewModel.name
+        regularPriceLabel.attributedText = viewModel.regularPrice
+        actualPriceLabel.text = viewModel.actualPrice
+        actualPriceLabel.isHidden = !viewModel.showActualPrice
+        installmentsLabel.text = viewModel.installments
+    }
 }
