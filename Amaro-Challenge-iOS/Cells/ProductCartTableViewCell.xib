@@ -73,7 +73,7 @@
                     <constraint firstAttribute="trailing" secondItem="dcx-k6-Psc" secondAttribute="trailing" constant="16" id="frB-H8-NMh"/>
                     <constraint firstItem="dcx-k6-Psc" firstAttribute="bottom" secondItem="49h-ln-oMZ" secondAttribute="bottom" id="gRz-Z6-fld"/>
                     <constraint firstItem="I82-id-RJa" firstAttribute="trailing" secondItem="nsB-8e-1TP" secondAttribute="trailing" id="rbC-IO-cBy"/>
-                    <constraint firstAttribute="bottom" secondItem="49h-ln-oMZ" secondAttribute="bottom" constant="12" id="wKo-Xs-vC6"/>
+                    <constraint firstAttribute="bottom" secondItem="49h-ln-oMZ" secondAttribute="bottom" priority="999" constant="12" id="wKo-Xs-vC6"/>
                     <constraint firstItem="nsB-8e-1TP" firstAttribute="top" secondItem="49h-ln-oMZ" secondAttribute="top" id="xQh-NG-6pC"/>
                 </constraints>
             </tableViewCellContentView>
