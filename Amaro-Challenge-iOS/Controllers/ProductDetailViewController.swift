@@ -40,8 +40,10 @@ class ProductDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.containerView.alpha = 0
-        UIView.animate(withDuration: 0.4, delay: 0.2, options: .curveEaseInOut, animations: {
+        self.containerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: .curveEaseInOut, animations: {
             self.containerView.alpha = 1
+            self.containerView.transform = .identity
         })
     }
     
