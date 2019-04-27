@@ -14,14 +14,14 @@ class ProductDetailViewController: BaseViewController {
     private let viewModel: ProductViewModel
     
     // MARK: - Outlets
-    @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var discountLabel: UILabel!
-    @IBOutlet private weak var image: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var regularPriceLabel: UILabel!
-    @IBOutlet private weak var actualPriceLabel: UILabel!
-    @IBOutlet private weak var installmentsLabel: UILabel!
-    @IBOutlet private weak var sizeCollectionView: UICollectionView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var discountLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var regularPriceLabel: UILabel!
+    @IBOutlet weak var actualPriceLabel: UILabel!
+    @IBOutlet weak var installmentsLabel: UILabel!
+    @IBOutlet weak var sizeCollectionView: UICollectionView!
     
     // MARK: - Variables
     var addedToCart: (() -> Void)?
@@ -81,7 +81,7 @@ class ProductDetailViewController: BaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func buyProduct(_ sender: Any) {
+    @IBAction func buyProduct() {
         if viewModel.selectedSizeIndexPath == nil {
             self.showAlert(title: "Selecione um tamanho", message: "É necessário selecionar um tamanho para adicionar o produto ao carrinho.")
             return

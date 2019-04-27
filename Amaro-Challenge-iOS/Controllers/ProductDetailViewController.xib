@@ -76,7 +76,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="buyProduct:" destination="-1" eventType="touchUpInside" id="Eg9-ee-DLw"/>
+                                <action selector="buyProduct" destination="-1" eventType="touchUpInside" id="LqJ-G9-kL5"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-gI-tR5">
@@ -171,6 +171,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon-close" width="17.5" height="17.5"/>
+        <image name="icon-close" width="24" height="24"/>
     </resources>
 </document>
