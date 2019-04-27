@@ -43,12 +43,42 @@ class ProductListViewController: BaseViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon-shopping")) { _ in
             CartListViewController().open(flow: .modal(createNavigation: true))
         }
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
+        updateCartQuantity()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: viewModel.filterNavigationImage) { _ in
             self.viewModel.changeFilter()
             self.updateFilterImage()
             self.collectionView.reloadData()
         }
+    }
+    
+    private func updateCartQuantity() {
+        let image = #imageLiteral(resourceName: "icon-shopping").withRenderingMode(.alwaysOriginal)
+        var newImage = image
+        let numberOfItems = CartManager.shared.numberOfItems
+        if numberOfItems > 0 {
+            newImage = textToImage(drawText: String(numberOfItems), inImage: image, atPoint: CGPoint(x: image.size.width / 2 - 4, y: image.size.height / 2 - 4))
+        }
+        self.navigationItem.rightBarButtonItem?.image = newImage
+    }
+    
+    private func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
+        
+        let textFontAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.boldSystemFont(ofSize: 13),
+            .foregroundColor: UIColor.black]
+        image.draw(in: CGRect(origin: .zero, size: image.size))
+        
+        let rect = CGRect(origin: point, size: image.size)
+        text.draw(in: rect, withAttributes: textFontAttributes)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     private func updateFilterImage() {
@@ -120,6 +150,9 @@ extension ProductListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = ProductDetailViewController(viewModel: viewModel.product(at: indexPath.row))
+        controller.addedToCart = {
+            self.updateCartQuantity()
+        }
         controller.modalPresentationStyle = .overFullScreen
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true)

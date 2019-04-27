@@ -23,6 +23,9 @@ class ProductDetailViewController: BaseViewController {
     @IBOutlet private weak var installmentsLabel: UILabel!
     @IBOutlet private weak var sizeCollectionView: UICollectionView!
     
+    // MARK: - Variables
+    var addedToCart: (() -> Void)?
+    
     // MARK: - Init
     
     init(viewModel: ProductViewModel) {
@@ -85,6 +88,7 @@ class ProductDetailViewController: BaseViewController {
         }
         
         viewModel.addToCart()
+        addedToCart?()
         closeView()
     }
 }

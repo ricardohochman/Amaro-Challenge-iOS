@@ -43,4 +43,8 @@ class CartManager {
         let price = products.reduce(0, { $0 + (Double($1.numberOfProducts) * ($1.priceDouble)) })
         return price.toBrazilianCurrency() ?? ""
     }
+    
+    var numberOfItems: Int {
+        return products.reduce(0, { $0 + ($1.numberOfProducts) })
+    }
 }
