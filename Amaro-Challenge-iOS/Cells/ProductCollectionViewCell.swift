@@ -27,7 +27,7 @@ class ProductCollectionViewCell: UICollectionViewCell, ReusableView {
     func setup(viewModel: ProductViewModel) {
         image.setImage(url: viewModel.imagePath)
         discountLabel.text = viewModel.discount
-        discountLabel.isHidden = !viewModel.inSale
+        discountLabel.isHidden = !viewModel.onSale
         nameLabel.text = viewModel.name
         regularPriceLabel.attributedText = viewModel.regularPrice
         actualPriceLabel.text = viewModel.actualPrice

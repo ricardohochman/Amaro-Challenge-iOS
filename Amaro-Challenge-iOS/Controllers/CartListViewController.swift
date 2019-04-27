@@ -74,6 +74,14 @@ extension CartListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ProductCartTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setup(viewModel: cartManager.product(at: indexPath.row))
+        cell.didChangeCount = {
+            self.setupLayout()
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        cell.didRemoveProduct = {
+            self.setupLayout()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
         return cell
     }
     

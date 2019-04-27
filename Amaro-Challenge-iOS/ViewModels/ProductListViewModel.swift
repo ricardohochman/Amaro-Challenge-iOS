@@ -44,7 +44,7 @@ class ProductListViewModel {
     func changeFilter() {
         isFiltering.toggle()
         if isFiltering {
-            filteredProducts = products.filter { $0.inSale }
+            filteredProducts = products.filter { $0.onSale }
         } else {
             filteredProducts = products
         }

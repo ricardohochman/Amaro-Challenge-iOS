@@ -31,7 +31,7 @@ class ProductViewModel {
     
     var regularPrice: NSMutableAttributedString {
         let attributeString = NSMutableAttributedString(string: product.regularPrice)
-        if inSale {
+        if onSale {
             attributeString.addAttributes(
                 [.font: UIFont.systemFont(ofSize: 15),
                  .strikethroughStyle: NSUnderlineStyle.single.rawValue],
@@ -49,11 +49,11 @@ class ProductViewModel {
     }
     
     var showActualPrice: Bool {
-        return inSale
+        return onSale
     }
     
-    var inSale: Bool {
-        return product.regularPrice != product.actualPrice
+    var onSale: Bool {
+        return product.onSale
     }
     
     var discount: String {
@@ -89,6 +89,19 @@ class ProductViewModel {
     func clearProduct() {
         numberOfProducts = 0
         selectedSizeIndexPath = nil
+    }
+    
+    enum Operation {
+        case plus, minus
+    }
+    
+    func changeProductsCount(_ operation: Operation) {
+        switch operation {
+        case .plus:
+            numberOfProducts += 1
+        case .minus:
+            numberOfProducts -= 1
+        }
     }
 }
 
